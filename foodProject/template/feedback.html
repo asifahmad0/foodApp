@@ -1,0 +1,62 @@
+{% extends 'head.html'%}
+{% block activ5 %}active{% endblock %}
+{%block class%}class="sub_page"{% endblock %}
+
+
+{% block content%}
+
+<!-- book section -->
+<section class="book_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Your Feedback Is Really Valueble
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="{% url 'Feedback' %}" method="POST">{% csrf_token %}
+              <div>
+                <input type="text" name="Uname" class="form-control" placeholder="Your Name" />
+              </div>
+                <select class="form-control nice-select wide" name="Rating">
+                  <option value="" disabled selected>
+                    How many Rating?
+                  </option>
+                  <option value="2">
+                    2
+                  </option>
+                  <option value="3">
+                    3
+                  </option>
+                  <option value="4">
+                    4
+                  </option>
+                  <option value="5">
+                    5
+                  </option>
+                </select>
+              <div>
+                <textarea id="text" class="form-control" name="feed" cols="64" rows="10" placeholder="write your openion..."></textarea>
+               </div>
+               <div>
+                <label for="img" class="form-control" style="cursor: pointer;" class="btn">Upload Image(.jpg/png)</label>
+                <input id="img" type="file" name="Image"style="visibility:hidden;" class="form-control">
+              </div>
+              
+              <div class="btn_box">
+                <button>
+                  Submit
+                </button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end book section -->
+
+{% endblock %}
