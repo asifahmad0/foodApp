@@ -62,6 +62,4 @@ def feedback(request):
             data = Review( user_name=Uname, rating=Ratting, feedbacks=comment, img=image)
             data.save()
 
-
-
     return render(request, "feedback.html")
