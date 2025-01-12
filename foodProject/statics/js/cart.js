@@ -6,9 +6,11 @@ function cartOpen(){
     if(cartOpCl === '0'){
         cart.style.right='0';
         cartOpCl = '1';
+        console.log('working')
     }else{
         cart.style.right='-400px';
         cartOpCl='0';
+        console.log('not working')
     }
    
 }
