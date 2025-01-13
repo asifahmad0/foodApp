@@ -3,7 +3,68 @@
 File: README.md
 ================================================
 # foodApp
-
+================================================
+Project/files Structure
+================================================
+Directory structure:
+└── asifahmad0-foodapp/
+    ├── README.md
+    ├── foodProject/
+    │   ├── build_files.sh
+    │   ├── db.sqlite3
+    │   ├── manage.py
+    │   ├── requirements.txt
+    │   ├── vercel.json
+    │   ├── foodApp/
+    │   │   ├── __init__.py
+    │   │   ├── admin.py
+    │   │   ├── apps.py
+    │   │   ├── models.py
+    │   │   ├── tests.py
+    │   │   ├── views.py
+    │   │   ├── __pycache__/
+    │   │   └── migrations/
+    │   │       ├── 0001_initial.py
+    │   │       ├── 0002_rename_feedback_review.py
+    │   │       ├── 0003_review_img_alter_items_img.py
+    │   │       ├── 0004_alter_items_img.py
+    │   │       ├── __init__.py
+    │   │       └── __pycache__/
+    │   ├── foodProject/
+    │   │   ├── __init__.py
+    │   │   ├── asgi.py
+    │   │   ├── settings.py
+    │   │   ├── urls.py
+    │   │   ├── wsgi.py
+    │   │   └── __pycache__/
+    │   ├── media/
+    │   │   └── items/
+    │   ├── statics/
+    │   │   ├── css/
+    │   │   │   ├── bootstrap.css
+    │   │   │   ├── responsive.css
+    │   │   │   ├── style.css
+    │   │   │   └── style.scss
+    │   │   ├── fonts/
+    │   │   │   ├── fontawesome-webfont.ttf
+    │   │   │   ├── fontawesome-webfont.woff
+    │   │   │   └── fontawesome-webfont.woff2
+    │   │   ├── images/
+    │   │   └── js/
+    │   │       ├── bootstrap.js
+    │   │       ├── cart.js
+    │   │       └── custom.js
+    │   └── template/
+    │       ├── about.html
+    │       ├── book.html
+    │       ├── feedback.html
+    │       ├── head.html
+    │       ├── index.html
+    │       └── menu.html
+    └── .github/
+        └── workflows/
+            └── django.ym
+            
 ================================================
 File: foodProject/build_files.sh
 ================================================
@@ -82,5 +143,6 @@ File: foodProject/vercel.json
  }
 ]
 }
+
 
 
