@@ -12,7 +12,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "template/index.html"
+            "dest": "/manage.py"
         },
         {
             "src": "/(.*)",
