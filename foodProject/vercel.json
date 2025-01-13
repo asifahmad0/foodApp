@@ -1,6 +1,6 @@
 {
     "builds": [{
-        "src": "foodApp/wsgi.py",
+        "src": "foodProject/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.12.6" }
     },
@@ -16,7 +16,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "foodApp/wsgi.py"
+            "dest": "foodProject/wsgi.py"
  }
 ]
 }
