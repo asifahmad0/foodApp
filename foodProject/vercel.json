@@ -16,8 +16,8 @@
     }
   ],
   "env": {
-    "DJANGO_SECRET_KEY": "@django-secret-key",
+    "DJANGO_SECRET_KEY": "@$If7649",
     "DATABASE_URL": "@database-url",
-    "ALLOWED_HOSTS": "your-app-name.vercel.app"
+    "ALLOWED_HOSTS": "food-ioexgl2xj-asifahmad0s-projects.vercel.app"
   }
 }
