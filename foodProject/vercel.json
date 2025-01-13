@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "foodProject/manage.py",
+      "src": "foodProject/foodApp/wsgi.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "50mb"
@@ -12,7 +12,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "foodProject/manage.py"
+      "dest": "foodProject/foodApp/wsgi.py"
     }
   ],
   "env": {
