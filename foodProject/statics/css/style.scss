@@ -673,7 +673,7 @@ a:focus {
     }
   }
 
-}
+
 
 // end book section
 
@@ -912,3 +912,16 @@ a:focus {
 }
 
 // end footer section
+
+#profile{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  li{
+    list-style: none;
+    padding: 10px 20px;
+    background-color:#ffbe33;
+  }
+}

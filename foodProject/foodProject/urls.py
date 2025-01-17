@@ -27,5 +27,7 @@ urlpatterns = [
     path('book/',book, name='Book'),
     path('menu/',menu, name='Menu'),
     path('feedback/',feedback, name='Feedback'),
+    path('profile/',profile, name='Profile'),
+    path('loginn/',loginn, name='Login'),
 ]+ static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 

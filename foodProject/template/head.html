@@ -72,7 +72,7 @@
               </li>
             </ul>
             <div class="user_option">
-              <a href="" class="user_link">
+              <a id="pro" class="user_link">
                 <i class="fa fa-user" aria-hidden="true"></i>
               </a>
               <a id="cartTab" class="cart_link" onclick="cartOpen()">
@@ -141,6 +141,17 @@
     {%block slider %}{% endblock%}
   </div>
 
+   <!-- Start Profile section -->
+    <div id="profile">
+    <li><a href="{% url 'Profile' %}">Register</a></li>
+    <li><a href="{% url 'Login' %}">Login</a></li>
+</div>
+
+{% block profile %}{% endblock %}
+
+
+    <!-- End Profile section -->
+
   <!-- Start Cart section -->
   <div class="cartTab ">
     <div id="soping_title">
@@ -173,7 +184,8 @@
   <!-- end Cart section -->
 
 
-{% block content %}{% endblock %}
+{% block content %}
+{% endblock %}
 
 
 
@@ -281,6 +293,7 @@
 <!-- custom js -->
 <script src="{% static 'js/custom.js' %}"></script>
 <script src="{% static 'js/cart.js' %}"></script>
+<script src="{% static 'js/profile.js' %}"></script>
 <!-- Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
 </script>

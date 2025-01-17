@@ -208,6 +208,10 @@ a:focus {
 .user_option .user_link {
   color: #ffffff;
 }
+.user_option #pro {
+  color: #ffffff;
+  cursor: pointer;
+}
 
 .user_option .user_link:hover {
   color: #ffbe33;
@@ -308,6 +312,89 @@ a:focus {
           transform: rotate(90deg);
   top: 0;
 }
+/* -----------------------Profile section--------------------------------------*/
+#entre_account{
+  width:100vw;
+  height: 70vh;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  border: 2px solid #ffbe33;
+  border-radius: 20px;
+}
+
+.form div{
+  width: 100%;
+  height: 90px;
+  overflow: hidden
+}
+.form div input{
+ width: 100%;
+ height: 50px;
+ color: #000000;
+ padding-left: 20px;
+ outline: none;
+ border: none;
+ border-bottom: 2px solid #ffbe33;
+}
+.form button{
+  outline: none;
+  background-color:#e69c00;
+  border: 2px solid #e69c00;
+  color: #eee;
+}
+.form button:hover{
+  background-color: #e88c0e;
+}
+.login{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.login img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#login{
+  display: none;
+}
+
+#profile{
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  top: -400px;
+  right: 100px;
+  display: flex;
+  gap: 10px;
+  border: 2px solid #ffbe33;
+  background-color: rgba(0, 0, 0, 0.281);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+  transition: 0.5S;
+}
+#profile li{
+  list-style: none;
+  padding: 10px 20px;
+  background-color:#ffbe33;
+}
+#profile li a{
+  text-decoration: none;
+  color: white;
+}
+/* -----------------------End section--------------------------------------*/
+
+
 /* ------------------------cart section--------------------------------------*/
 
 .cartTab{

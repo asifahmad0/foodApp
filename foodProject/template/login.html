@@ -1,0 +1,27 @@
+{% extends 'head.html' %}
+{% load static %}
+{%block class%}class="sub_page"{% endblock %} 
+{% block profile %}
+
+<main id="entre_account">
+    <div class="login">
+        <img src="{% static 'images/f4.png'%}">
+</div>
+
+        <form class="form" action="" method="POST">{% csrf_token %}
+            <div>
+                <label for="">User Name</label>
+                <input type="text" name="Uname" placeholder="Enter Your Full Name" required>
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" name="Pass" placeholder="Enter Your Password" required>
+            </div>
+            <button type="submit">Register</button>
+            <a href="{% url 'Profile' %}">Register</a>
+        </form>
+
+        
+    
+</main>
+{% endblock profile %}

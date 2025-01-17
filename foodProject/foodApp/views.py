@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import itemsList,items,Review,book_table
 
@@ -46,7 +46,6 @@ def book(request):
     return render(request, 'book.html')
 
 def menu(request):
-
     item = items.objects.all()
     cetegory = itemsList.objects.all()
     return render(request, 'menu.html',{'item':item, 'cetegory':cetegory})
@@ -63,3 +62,11 @@ def feedback(request):
             data.save()
 
     return render(request, "feedback.html")
+
+def profile(request):
+
+    return render(request, 'profile.html')
+
+def loginn(request):
+
+    return render(request, 'login.html')
