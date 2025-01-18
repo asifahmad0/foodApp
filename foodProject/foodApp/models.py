@@ -39,3 +39,12 @@ class Review(models.Model):
     def __str__(self):
         return self.user_name
 
+class profileDB(models.Model):
+    uname= models.CharField(max_length=25)
+    mobile=models.IntegerField(null=False)
+    add=models.TextField()
+    passs=models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.uname
+

@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .models import itemsList,items,Review,book_table
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
+from .models import *
 
 # Create your views here.
 
@@ -65,8 +67,27 @@ def feedback(request):
 
 def profile(request):
 
+    if request.method == 'POST':
+        Uname = request.POST.get('Uname')
+        Mobile = request.POST.get('Mobile')
+        Add = request.POST.get('Add')
+        Passs = request.POST.get('Pass')
+        data = User.objects.create_user(Uname,Mobile,Passs)
+        data1 = profileDB(uname=Uname,mobile=Mobile,add=Add,passs=Passs)
+        data.save()
+        data1.save()
+        print(Uname,Mobile,Add,Passs)
+
     return render(request, 'profile.html')
 
 def loginn(request):
+
+    if request.method == 'POST':
+        Uname = request.POST.get('Uname')
+        Pass = request.POST.get('Pass')
+        userr= authenticate(request,username=Uname,password=Pass)
+        if userr is not None:
+           login(request, userr)
+           return redirect('/')
 
     return render(request, 'login.html')

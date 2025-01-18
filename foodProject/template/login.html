@@ -10,14 +10,14 @@
 
         <form class="form" action="" method="POST">{% csrf_token %}
             <div>
-                <label for="">User Name</label>
+                <label for="Uname">User Name</label>
                 <input type="text" name="Uname" placeholder="Enter Your Full Name" required>
             </div>
             <div>
-                <label for="">Password</label>
+                <label for="Pass">Password</label>
                 <input type="password" name="Pass" placeholder="Enter Your Password" required>
             </div>
-            <button type="submit">Register</button>
+            <button type="submit">Login</button>
             <a href="{% url 'Profile' %}">Register</a>
         </form>
 
