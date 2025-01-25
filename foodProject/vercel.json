@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "foodProject/foodApp/wsgi.py",
+      "src": "foodProject/foodProject/wsgi.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": ""
@@ -12,12 +12,12 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "foodProject/foodApp/wsgi.py"
+      "dest": "foodProject/foodProject/wsgi.py"
     }
   ],
   "env": {
-    "DJANGO_SECRET_KEY": "@$If7649",
-    "DATABASE_URL": "@database-url",
-    "ALLOWED_HOSTS": "food-ioexgl2xj-asifahmad0s-projects.vercel.app"
+    "DJANGO_SECRET_KEY": "",
+    "DATABASE_URL": "",
+    "ALLOWED_HOSTS": ""
   }
 }
