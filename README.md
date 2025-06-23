@@ -1,148 +1,74 @@
-# foodApp
-================================================
-File: README.md
-================================================
-# foodApp
-================================================
-Project/files Structure || See in code View
-================================================
-Directory structure:
-└── asifahmad0-foodapp/
-    ├── README.md
-    ├── foodProject/
-    │   ├── build_files.sh
-    │   ├── db.sqlite3
-    │   ├── manage.py
-    │   ├── requirements.txt
-    │   ├── vercel.json
-    │   ├── foodApp/
-    │   │   ├── __init__.py
-    │   │   ├── admin.py
-    │   │   ├── apps.py
-    │   │   ├── models.py
-    │   │   ├── tests.py
-    │   │   ├── views.py
-    │   │   ├── __pycache__/
-    │   │   └── migrations/
-    │   │       ├── 0001_initial.py
-    │   │       ├── 0002_rename_feedback_review.py
-    │   │       ├── 0003_review_img_alter_items_img.py
-    │   │       ├── 0004_alter_items_img.py
-    │   │       ├── __init__.py
-    │   │       └── __pycache__/
-    │   ├── foodProject/
-    │   │   ├── __init__.py
-    │   │   ├── asgi.py
-    │   │   ├── settings.py
-    │   │   ├── urls.py
-    │   │   ├── wsgi.py
-    │   │   └── __pycache__/
-    │   ├── media/
-    │   │   └── items/
-    │   ├── statics/
-    │   │   ├── css/
-    │   │   │   ├── bootstrap.css
-    │   │   │   ├── responsive.css
-    │   │   │   ├── style.css
-    │   │   │   └── style.scss
-    │   │   ├── fonts/
-    │   │   │   ├── fontawesome-webfont.ttf
-    │   │   │   ├── fontawesome-webfont.woff
-    │   │   │   └── fontawesome-webfont.woff2
-    │   │   ├── images/
-    │   │   └── js/
-    │   │       ├── bootstrap.js
-    │   │       ├── cart.js
-    │   │       └── custom.js
-    │   └── template/
-    │       ├── about.html
-    │       ├── book.html
-    │       ├── feedback.html
-    │       ├── head.html
-    │       ├── index.html
-    │       └── menu.html
-    └── .github/
-        └── workflows/
-            └── django.ym
-            
-================================================
-File: foodProject/build_files.sh
-================================================
-echo "BUILD START"
- python3.12.6 -m pip install -r requirements.txt
- python3.12.6 manage.py collectstatic --noinput --clear
- echo "BUILD END"
+<div class="border border-border rounded-lg bg-background p-6 shadow-sm"><div class="prose prose-sm md:prose-base lg:prose-lg max-w-none prose-headings:font-bold prose-a:text-blue-600" style="user-select: none;"><div id="top" class="">
 
-================================================
-File: foodProject/manage.py
-================================================
-#!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
-import os
-import sys
+<div align="center" class="text-center">
+<h1>FOODY</h1>
+<p><em>Transforming Food Experiences, One Bite at a Time</em></p>
 
-
-def main():
-    """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'foodProject.settings')
-    try:
-        from django.core.management import execute_from_command_line
-    except ImportError as exc:
-        raise ImportError(
-            "Couldn't import Django. Are you sure it's installed and "
-            "available on your PYTHONPATH environment variable? Did you "
-            "forget to activate a virtual environment?"
-        ) from exc
-    execute_from_command_line(sys.argv)
-
-
-if __name__ == '__main__':
-    main()
-
-
-================================================
-File: foodProject/requirements.txt
-================================================
-﻿asgiref==3.8.1
-Django==5.1.4
-djangorestframework==3.15.2
-drf-yasg==1.21.8
-inflection==0.5.1
-packaging==24.2
-pillow==11.1.0
-pytz==2024.2
-PyYAML==6.0.2
-sqlparse==0.5.3
-tzdata==2024.2
-uritemplate==4.1.1
-python==3.12.6
-
-
-================================================
-File: foodProject/vercel.json
-================================================
-{
-    "builds": [{
-        "src": "foodProject/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.12.6" }
-    },
-    {
-        "src": "build_files.sh",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "staticfiles_build" }
-    }],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/manage.py"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "foodProject/wsgi.py"
- }
-]
-}
-
-
-
+<img alt="last-commit" src="https://img.shields.io/github/last-commit/asifahmad0/foodApp?style=flat&amp;logo=git&amp;logoColor=white&amp;color=0080ff" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="repo-top-language" src="https://img.shields.io/github/languages/top/asifahmad0/foodApp?style=flat&amp;color=0080ff" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="repo-language-count" src="https://img.shields.io/github/languages/count/asifahmad0/foodApp?style=flat&amp;color=0080ff" class="inline-block mx-1" style="margin: 0px 2px;">
+<p><em>Built with the tools and technologies:</em></p>
+<img alt="JSON" src="https://img.shields.io/badge/JSON-000000.svg?style=flat&amp;logo=JSON&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="Markdown" src="https://img.shields.io/badge/Markdown-000000.svg?style=flat&amp;logo=Markdown&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&amp;logo=JavaScript&amp;logoColor=black" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="GNU%20Bash" src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=flat&amp;logo=GNU-Bash&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="Python" src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&amp;logo=Python&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+<img alt="GitHub%20Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=flat&amp;logo=GitHub-Actions&amp;logoColor=white" class="inline-block mx-1" style="margin: 0px 2px;">
+</div>
+<br>
+<hr>
+<h2>Table of Contents</h2>
+<ul class="list-disc pl-4 my-0">
+<li class="my-0"><a href="#overview">Overview</a></li>
+<li class="my-0"><a href="#getting-started">Getting Started</a>
+<ul class="list-disc pl-4 my-0">
+<li class="my-0"><a href="#prerequisites">Prerequisites</a></li>
+<li class="my-0"><a href="#installation">Installation</a></li>
+<li class="my-0"><a href="#usage">Usage</a></li>
+<li class="my-0"><a href="#testing">Testing</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Overview</h2>
+<hr>
+<h2>Getting Started</h2>
+<h3>Prerequisites</h3>
+<p>This project requires the following dependencies:</p>
+<ul class="list-disc pl-4 my-0">
+<li class="my-0"><strong>Programming Language:</strong> Python</li>
+<li class="my-0"><strong>Package Manager:</strong> Pip</li>
+</ul>
+<h3>Installation</h3>
+<p>Build foodApp from the source and install dependencies:</p>
+<ol>
+<li class="my-0">
+<p><strong>Clone the repository:</strong></p>
+<pre><code class="language-sh">❯ git clone https://github.com/asifahmad0/foodApp
+</code></pre>
+</li>
+<li class="my-0">
+<p><strong>Navigate to the project directory:</strong></p>
+<pre><code class="language-sh">❯ cd foodApp
+</code></pre>
+</li>
+<li class="my-0">
+<p><strong>Install the dependencies:</strong></p>
+</li>
+</ol>
+<p><strong>Using <a href="https://pypi.org/project/pip/">pip</a>:</strong></p>
+<pre><code class="language-sh">❯ pip install -r foodProject/requirements.txt
+</code></pre>
+<h3>Usage</h3>
+<p>Run the project with:</p>
+<p><strong>Using <a href="https://pypi.org/project/pip/">pip</a>:</strong></p>
+<pre><code class="language-sh">python {entrypoint}
+</code></pre>
+<h3>Testing</h3>
+<p>Foodapp uses the {<strong>test_framework</strong>} test framework. Run the test suite with:</p>
+<p><strong>Using <a href="https://pypi.org/project/pip/">pip</a>:</strong></p>
+<pre><code class="language-sh">pytest
+</code></pre>
+<hr>
+<div align="left" class=""><a href="#top">⬆ Return</a></div>
+<hr></div></div></div>
